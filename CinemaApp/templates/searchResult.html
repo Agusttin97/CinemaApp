@@ -1,0 +1,30 @@
+{% extends 'padre.html' %}
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+<h1>Search Result</h1>
+
+
+{% if res %}
+<ul>
+
+    {% for movie in res %}
+
+    <li>Movie: {{movie.movie}}</li>
+    <li>Genre: {{movie.genre}}</li>
+    <li>Release: {{movie.release}}</li>
+    <br>
+
+    {% endfor %}
+
+
+</ul>
+{% else %}
+<p>Movie not found</p>
+
+
+{% endif %}
+
+
+{% endblock %}

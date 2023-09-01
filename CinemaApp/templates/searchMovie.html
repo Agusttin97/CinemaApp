@@ -1,0 +1,16 @@
+{% extends 'padre.html' %} 
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+    <h5>Search Movie</h5>
+
+     <form action="{% url 'Search' %}" method="get"> 
+
+        <p>Movie: <input type="text" name="movie"></p>
+                
+        <button type="submit">Search</button>
+        
+    </form>
+
+{% endblock %}

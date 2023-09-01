@@ -1,0 +1,16 @@
+{% extends 'padre.html' %} 
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+    <h5>Add new User</h5>
+
+    <form action="{% url 'User' %}" method="post">{% csrf_token %}
+
+      {{myform.as_p}}
+
+      <button type="submit">Enviar</button>
+    
+    </form>
+
+{% endblock %}
