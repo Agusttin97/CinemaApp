@@ -27,7 +27,7 @@ class Cinema(models.Model):
     name = models.CharField(max_length=30,)
     location = models.CharField(max_length=30)
     capacity = models.IntegerField()
-    movie = models.ManyToManyField(Movie)
+    movie = models.ManyToManyField(Movie) #Un cine puede tener varias peliculas 
     
     def __str__(self):
         return f'{self.name}'
